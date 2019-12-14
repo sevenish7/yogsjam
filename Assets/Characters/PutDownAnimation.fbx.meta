@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: bb10b7a33a3f731408c1ae34155f1408
+guid: 6989751c25cee4d4bac39fa8d1d249eb
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
   - first:
-      74: 1827226128182048838
-    second: Take 001
+      74: 8830183786749015773
+    second: PutDownAnimation
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -35,10 +35,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
+      name: PutDownAnimation
+      takeName: PutDownAnimation
       internalID: 0
-      firstFrame: 1
+      firstFrame: 0
       lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
@@ -46,7 +46,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
