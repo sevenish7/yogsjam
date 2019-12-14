@@ -9,8 +9,9 @@ public class Pickupable : BaseInteractable
 
     private bool isPickedUp = false;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         rb = GetComponentInChildren<Rigidbody>();
     }
 
@@ -37,12 +38,16 @@ public class Pickupable : BaseInteractable
 
     private void Pickup()
     {
+        Debug.Log("picked up");
         isPickedUp = true;
         rb.isKinematic = true;
+        coll.enabled = false;
     }
 
     public void Putdown()
     {
         isPickedUp = false;
+        rb.isKinematic = false;
+        coll.enabled = true;
     }
 }

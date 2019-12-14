@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System.Linq;
 
 public class Interactor : MonoBehaviour, IInteractor
 {
@@ -26,7 +27,10 @@ public class Interactor : MonoBehaviour, IInteractor
         }
         else
         {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, interactRadius);
+            Collider[] colliders = Physics.OverlapSphere(transform.position, interactRadius)
+                .OrderBy(c => (c.transform.position - transform.position).sqrMagnitude)
+                .ToArray();
+            
             foreach(var c in colliders)
             {
                 var interactable = c.GetComponent<BaseInteractable>();
@@ -64,7 +68,7 @@ public class Interactor : MonoBehaviour, IInteractor
         carriedPickup = null;
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, interactRadius);
