@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float turnSpeed = 0.5f;
 
     [SerializeField] private Interactor interactor = null;
+    [SerializeField] private Animator animator = null;
 
     private CharacterController characterController;
 
@@ -25,11 +26,6 @@ public class PlayerController : MonoBehaviour
     {
         //move this into the spawn player function
         characterController = GetComponentInChildren<CharacterController>();
-    }
-
-    void Start()
-    {
-        
     }
 
     void Update()
@@ -53,5 +49,8 @@ public class PlayerController : MonoBehaviour
         Vector3 delta = (dir * speed * Time.deltaTime);
 
         characterController.Move(delta);
+
+        animator.SetFloat("velX", Mathf.Abs(characterController.velocity.x));
+        animator.SetFloat("velZ", Mathf.Abs(characterController.velocity.z));
     }
 }

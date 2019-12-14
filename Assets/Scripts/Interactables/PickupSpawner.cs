@@ -5,7 +5,8 @@ using UnityEngine;
 public class PickupSpawner : BaseInteractable
 {
 
-    [SerializeField] private Pickupable spawnablePrefab;
+    [SerializeField] private IngredientType ingredientType;
+    [SerializeField] private IngredientPickup spawnablePrefab;
 
     public override bool CanInteract()
     {
@@ -16,13 +17,15 @@ public class PickupSpawner : BaseInteractable
     {
         if(!interactor.IsCarrying)
         {
-            Pickupable p = SpawnPickup();
+            IngredientPickup p = SpawnPickup();
             p.Interact(interactor);
         }
     }
 
-    private Pickupable SpawnPickup()
+    private IngredientPickup SpawnPickup()
     {
-        return Instantiate(spawnablePrefab, transform.position, Quaternion.identity);
+        IngredientPickup pickup = Instantiate(spawnablePrefab, transform.position, Quaternion.identity);
+        pickup.InitialiseIngredientData(new IngredientData(ingredientType));
+        return pickup;
     }
 }

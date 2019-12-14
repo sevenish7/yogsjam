@@ -8,6 +8,7 @@ public class Interactor : MonoBehaviour
 {
     [SerializeField] Transform carryTransform = null;
     [SerializeField] private float interactRadius = 3f;
+    [SerializeField] private Animator animator;
 
     public Pickupable CarriedPickup {get; private set; }
     public bool IsCarrying {get; private set; }
@@ -52,6 +53,8 @@ public class Interactor : MonoBehaviour
             pickup.transform.position = carryTransform.position;
             // pickup.transform.DOMove(carryTransform.position, 0.2f);
             // pickup.transform.DORotate(Vector3.zero, 0.2f);
+            animator.SetTrigger("pickup");
+            animator.SetBool("isCarrying", true);
             return true;
         }
         return false;
@@ -63,6 +66,9 @@ public class Interactor : MonoBehaviour
         CarriedPickup.Putdown();
         IsCarrying = false;
         CarriedPickup = null;
+
+        animator.SetTrigger("putdown");
+        animator.SetBool("isCarrying", false);
     }
 
     private Collider[] FilterCollidersForCurrentState(Collider[] colliders)

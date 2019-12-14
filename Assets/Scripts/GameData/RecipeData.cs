@@ -6,16 +6,19 @@ using UnityEngine;
 public class RecipeData : SerializedScriptableObject
 {
     [SerializeField] private List<System.Tuple<IngredientType, ProcessType>> recipe = new List<System.Tuple<IngredientType, ProcessType>>();
-
-
-
 }
 
 [System.Serializable]
 public class IngredientData
 {
-    [SerializeField] private IngredientType baseIngredientType;
+    private IngredientType baseIngredientType;
     private ProcessType appliedProcess = ProcessType.NONE;
+
+    public IngredientData(IngredientType type)
+    {
+        baseIngredientType = type;
+        appliedProcess = ProcessType.NONE;
+    }
     
     public ProcessType AppliedProcess
     {
@@ -40,6 +43,8 @@ public enum IngredientType
 {
     METAL,
     SALT,
+    RUBBER,
+    JAFFA,
 }
 
 public enum ProcessType

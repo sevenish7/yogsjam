@@ -1,0 +1,253 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e8f52ace17645c4c9c501b1919adcab, type: 3}
+  m_Name: IngredientLookup
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 4290772515632616247, guid: 8f8286f777e8a3948a24ebdce2775509, type: 3}
+    - {fileID: 2212313912624147500, guid: 0b7caf8ff27c712489a5604310d67e6f, type: 3}
+    - {fileID: 9028365035811924822, guid: 6bd6db438aa6d71409388fb6fc376ee7, type: 3}
+    - {fileID: 1329448470054300118, guid: 2cb8400640e1e1244bdc1c332f1bac71, type: 3}
+    - {fileID: 6139984097639988419, guid: e802329ed8186a54d8461b0703f427f3, type: 3}
+    - {fileID: 8113234078520260879, guid: 1d6921b1f0701434798cd96de850dc86, type: 3}
+    - {fileID: 6793860902175451278, guid: fb48cfa74b464aa409039d08765d0748, type: 3}
+    - {fileID: 3294138540778097864, guid: 473771f9b0e94b145bc3c42ccec27031, type: 3}
+    - {fileID: 4326080252946715556, guid: e55cd60bdf758a54aae3ed42066aca7d, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: ingredientPrefabDictionary
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.Tuple`2[[IngredientType,
+        Assembly-CSharp],[ProcessType, Assembly-CSharp]], mscorlib],[UnityEngine.GameObject,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.ObjectEqualityComparer`1[[System.Tuple`2[[IngredientType,
+        Assembly-CSharp],[ProcessType, Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 9
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 2|System.Tuple`2[[IngredientType, Assembly-CSharp],[ProcessType, Assembly-CSharp]],
+        mscorlib
+    - Name: m_Item1
+      Entry: 3
+      Data: 0
+    - Name: m_Item2
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 3|System.Tuple`2[[IngredientType, Assembly-CSharp],[ProcessType, Assembly-CSharp]],
+        mscorlib
+    - Name: m_Item1
+      Entry: 3
+      Data: 0
+    - Name: m_Item2
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 4|System.Tuple`2[[IngredientType, Assembly-CSharp],[ProcessType, Assembly-CSharp]],
+        mscorlib
+    - Name: m_Item1
+      Entry: 3
+      Data: 0
+    - Name: m_Item2
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 5|System.Tuple`2[[IngredientType, Assembly-CSharp],[ProcessType, Assembly-CSharp]],
+        mscorlib
+    - Name: m_Item1
+      Entry: 3
+      Data: 1
+    - Name: m_Item2
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 6|System.Tuple`2[[IngredientType, Assembly-CSharp],[ProcessType, Assembly-CSharp]],
+        mscorlib
+    - Name: m_Item1
+      Entry: 3
+      Data: 1
+    - Name: m_Item2
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 7|System.Tuple`2[[IngredientType, Assembly-CSharp],[ProcessType, Assembly-CSharp]],
+        mscorlib
+    - Name: m_Item1
+      Entry: 3
+      Data: 2
+    - Name: m_Item2
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 8|System.Tuple`2[[IngredientType, Assembly-CSharp],[ProcessType, Assembly-CSharp]],
+        mscorlib
+    - Name: m_Item1
+      Entry: 3
+      Data: 2
+    - Name: m_Item2
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 9|System.Tuple`2[[IngredientType, Assembly-CSharp],[ProcessType, Assembly-CSharp]],
+        mscorlib
+    - Name: m_Item1
+      Entry: 3
+      Data: 3
+    - Name: m_Item2
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 10|System.Tuple`2[[IngredientType, Assembly-CSharp],[ProcessType, Assembly-CSharp]],
+        mscorlib
+    - Name: m_Item1
+      Entry: 3
+      Data: 3
+    - Name: m_Item2
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  garbagePrefab: {fileID: 3607757828713216233, guid: 274dd4140ab74a24f95700374666d0bf,
+    type: 3}
