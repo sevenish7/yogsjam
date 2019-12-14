@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ee1ae95b51beb498f5c0340aec24a9, type: 3}
+  m_Name: Bees
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: requiredIngredients
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Tuple`2[[IngredientType, Assembly-CSharp],[ProcessType,
+        Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 1|System.Tuple`2[[IngredientType, Assembly-CSharp],[ProcessType, Assembly-CSharp]],
+        mscorlib
+    - Name: m_Item1
+      Entry: 3
+      Data: 1
+    - Name: m_Item2
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|System.Tuple`2[[IngredientType, Assembly-CSharp],[ProcessType, Assembly-CSharp]],
+        mscorlib
+    - Name: m_Item1
+      Entry: 3
+      Data: 1
+    - Name: m_Item2
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|System.Tuple`2[[IngredientType, Assembly-CSharp],[ProcessType, Assembly-CSharp]],
+        mscorlib
+    - Name: m_Item1
+      Entry: 3
+      Data: 0
+    - Name: m_Item2
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  product: 0

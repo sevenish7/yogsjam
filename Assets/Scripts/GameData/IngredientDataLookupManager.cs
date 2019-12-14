@@ -28,4 +28,31 @@ public class IngredientDataLookupManager : MonoBehaviour
             return lookup.GarbagePrefab;
         }
     }
+
+    public GameObject GetPrefabForProductType(ProductType data)
+    {
+        if(lookup.ProductPrefabDictionary.ContainsKey(data))
+        {
+            return lookup.ProductPrefabDictionary[data];
+        }
+        else
+        {
+            return lookup.GarbagePrefab;
+        }
+    }
+
+    public ProductType GetProductTypeForRecipe(IEnumerable<System.Tuple<IngredientType, ProcessType>> attemptedRecipe)
+    {
+        if(attemptedRecipe != null)
+        {
+            foreach(var recipe in lookup.ValidRecipes)
+            {
+                if(recipe.MatchesRecipe(attemptedRecipe))
+                {
+                    return recipe.Product;
+                }
+            }
+        }
+        return ProductType.GARBAGE;
+    }
 }

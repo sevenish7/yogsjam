@@ -25,6 +25,11 @@ MonoBehaviour:
     - {fileID: 6793860902175451278, guid: fb48cfa74b464aa409039d08765d0748, type: 3}
     - {fileID: 3294138540778097864, guid: 473771f9b0e94b145bc3c42ccec27031, type: 3}
     - {fileID: 4326080252946715556, guid: e55cd60bdf758a54aae3ed42066aca7d, type: 3}
+    - {fileID: 2952552365483073227, guid: 6a43ff4bf170eac468fd579cdd8b50c2, type: 3}
+    - {fileID: 683309790446979933, guid: 14c5e07ae05c417438db0f1de5ad28f9, type: 3}
+    - {fileID: 1438233768709771283, guid: 44f49878a764dac4aa18e5d4033d3ec7, type: 3}
+    - {fileID: 4469908292618063879, guid: cbb1c9fb2627d8746ae100aaa8a2183c, type: 3}
+    - {fileID: 877909937762253476, guid: 40d28aacdb3314b42a4356d4597a2417, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -249,5 +254,97 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: productPrefabDictionary
+      Entry: 7
+      Data: 11|System.Collections.Generic.Dictionary`2[[ProductType, Assembly-CSharp],[UnityEngine.GameObject,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 12|System.Collections.Generic.EnumEqualityComparer`1[[ProductType, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 10
+      Data: 11
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 10
+      Data: 12
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 10
+      Data: 13
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   garbagePrefab: {fileID: 3607757828713216233, guid: 274dd4140ab74a24f95700374666d0bf,
     type: 3}
+  validRecipes:
+  - {fileID: 11400000, guid: a235d6b4f0e601e4cb70520e74753cea, type: 2}
+  - {fileID: 11400000, guid: f61c4895beab3b54387ea0803cfc2a8a, type: 2}
+  - {fileID: 11400000, guid: ba8a253a462570c4c8bcbff132afb03a, type: 2}
+  - {fileID: 11400000, guid: d9b86bb6d2e0b614d9ab894634c82055, type: 2}
+  - {fileID: 11400000, guid: 11655623013db134fbc1f0b433e8c6d7, type: 2}

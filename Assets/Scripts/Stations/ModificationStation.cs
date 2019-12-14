@@ -6,14 +6,14 @@ public class ModificationStation : BaseStation
 {
 
     [SerializeField] private ProcessType processToApply;
-    [SerializeField] private IngredientPickup finalProductPrefab;
+    [SerializeField] private IngredientPickup ingredientPrefab;
 
     protected override void FinishProcess()
     {
         IngredientData input = containedIngredients[0];
         input.AppliedProcess = processToApply;
 
-        IngredientPickup pickup = Instantiate(finalProductPrefab, finalProductSpawnTransform.position, finalProductSpawnTransform.rotation);
+        IngredientPickup pickup = Instantiate(ingredientPrefab, finalProductSpawnTransform.position, finalProductSpawnTransform.rotation);
         pickup.InitialiseIngredientData(input);
 
         containedIngredients.Clear();
