@@ -19,29 +19,26 @@ public class Interactor : MonoBehaviour
 
     public void TryInteract()
     {
-        if(IsCarrying)
+        Collider[] colliders = Physics.OverlapSphere(transform.position, interactRadius, 1 << LayerMask.NameToLayer(BaseInteractable.INTERACTABLE_LAYER));
+        colliders = FilterCollidersForCurrentState(colliders);
+        
+        if(colliders.Length > 0)
         {
-        //if is carrying try to place object in station
-            //if no stattion then put down object
-            PutdownCarried();
-        }
-        else
-        {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, interactRadius)
-                .OrderBy(c => (c.transform.position - transform.position).sqrMagnitude)
-                .ToArray();
-            
             foreach(var c in colliders)
             {
                 var interactable = c.GetComponent<BaseInteractable>();
                 if(interactable != null && interactable.CanInteract())
                 {
                     interactable.Interact(this);
-                    break;
+                    return;
                 }
             }
         }
-        //if not carrying then try to start carrying
+
+        if(IsCarrying)
+        {
+            PutdownCarried();
+        }
     }
 
     public bool Pickup(Pickupable pickup)
@@ -66,6 +63,18 @@ public class Interactor : MonoBehaviour
         CarriedPickup.Putdown();
         IsCarrying = false;
         CarriedPickup = null;
+    }
+
+    private Collider[] FilterCollidersForCurrentState(Collider[] colliders)
+    {
+        IEnumerable<Collider> col = colliders.OrderBy(c => (c.transform.position - transform.position).sqrMagnitude);
+
+        if(IsCarrying)
+        {
+            col = colliders.Where(c => c.GetComponent<BaseStation>() != null);//move all the stations to the front
+        }
+
+        return col.ToArray();
     }
 
     private void OnDrawGizmosSelected()

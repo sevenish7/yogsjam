@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9108096124380840289}
+  - component: {fileID: 8354179163151427132}
   - component: {fileID: 9108096124380840290}
   - component: {fileID: 9108096124380840291}
   - component: {fileID: 9108096124380840292}
   - component: {fileID: 9108096124380840293}
-  - component: {fileID: 9108096124380840288}
   m_Layer: 8
   m_Name: Pickup
   m_TagString: Untagged
@@ -35,6 +35,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8354179163151427132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9108096124380840294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afac7420ede704d4a9a8af6b17758088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredient:
+    baseIngredientType: 0
 --- !u!33 &9108096124380840290
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -110,15 +124,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &9108096124380840288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9108096124380840294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10f10246f7562034f8f458d3c53736b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

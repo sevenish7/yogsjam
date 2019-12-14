@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
-public abstract class BaseInteractable : MonoBehaviour, IInteractable
+public abstract class BaseInteractable : SerializedMonoBehaviour, IInteractable
 {
     public const string INTERACTABLE_LAYER = "Interactable";
     
     public abstract bool CanInteract();
 
-    public abstract bool Interact(Interactor interactor);
+    public abstract void Interact(Interactor interactor);
 
     protected Collider coll;
 
@@ -22,7 +23,7 @@ public abstract class BaseInteractable : MonoBehaviour, IInteractable
 
 public interface IInteractable
 {
-    bool Interact(Interactor interactor);
+    void Interact(Interactor interactor);
     bool CanInteract();
 }
 
