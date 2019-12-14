@@ -20,17 +20,14 @@ public class Pickupable : BaseInteractable
         return !isPickedUp;
     }
 
-    public override bool Interact(IInteractor interactor)
+    public override bool Interact(Interactor interactor)
     {
         if(!isPickedUp)
         {
-            if(interactor is Interactor i)
+            if(interactor.Pickup(this))
             {
-                if(i.Pickup(this))
-                {
-                    Pickup();
-                    return true;
-                }
+                Pickup();
+                return true;
             }
         }
         return false;

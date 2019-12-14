@@ -9,7 +9,7 @@ public abstract class BaseInteractable : MonoBehaviour, IInteractable
     
     public abstract bool CanInteract();
 
-    public abstract bool Interact(IInteractor interactor);
+    public abstract bool Interact(Interactor interactor);
 
     protected Collider coll;
 
@@ -22,7 +22,7 @@ public abstract class BaseInteractable : MonoBehaviour, IInteractable
 
 public interface IInteractable
 {
-    bool Interact(IInteractor interactor);
+    bool Interact(Interactor interactor);
     bool CanInteract();
 }
 

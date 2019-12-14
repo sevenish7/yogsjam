@@ -4,13 +4,13 @@ using UnityEngine;
 using DG.Tweening;
 using System.Linq;
 
-public class Interactor : MonoBehaviour, IInteractor
+public class Interactor : MonoBehaviour
 {
     [SerializeField] Transform carryTransform = null;
     [SerializeField] private float interactRadius = 3f;
 
-    private Pickupable carriedPickup = null;
-    private bool isCarrying = false;
+    public Pickupable CarriedPickup {get; private set; }
+    public bool IsCarrying {get; private set; }
 
     public virtual bool CanInteract()
     {
@@ -19,7 +19,7 @@ public class Interactor : MonoBehaviour, IInteractor
 
     public void TryInteract()
     {
-        if(isCarrying)
+        if(IsCarrying)
         {
         //if is carrying try to place object in station
             //if no stattion then put down object
@@ -46,10 +46,10 @@ public class Interactor : MonoBehaviour, IInteractor
 
     public bool Pickup(Pickupable pickup)
     {
-        if(!isCarrying)
+        if(!IsCarrying)
         {
-            carriedPickup = pickup;
-            isCarrying = true;
+            CarriedPickup = pickup;
+            IsCarrying = true;
 
             pickup.transform.SetParent(carryTransform, true);
             pickup.transform.position = carryTransform.position;
@@ -60,12 +60,12 @@ public class Interactor : MonoBehaviour, IInteractor
         return false;
     }
 
-    private void PutdownCarried()
+    public void PutdownCarried()
     {
-        carriedPickup.transform.SetParent(null);
-        carriedPickup.Putdown();
-        isCarrying = false;
-        carriedPickup = null;
+        CarriedPickup.transform.SetParent(null);
+        CarriedPickup.Putdown();
+        IsCarrying = false;
+        CarriedPickup = null;
     }
 
     private void OnDrawGizmosSelected()
@@ -73,10 +73,4 @@ public class Interactor : MonoBehaviour, IInteractor
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, interactRadius);
     }
-}
-
-public interface IInteractor
-{
-    bool CanInteract();
-    void TryInteract();
 }

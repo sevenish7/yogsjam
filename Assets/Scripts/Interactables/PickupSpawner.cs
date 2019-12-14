@@ -12,12 +12,12 @@ public class PickupSpawner : BaseInteractable
         return true;
     }
 
-    public override bool Interact(IInteractor interactor)
+    public override bool Interact(Interactor interactor)
     {
-        if(interactor is Interactor i)
+        if(!interactor.IsCarrying)
         {
             Pickupable p = SpawnPickup();
-            p.Interact(i);
+            p.Interact(interactor);
             return true;
         }
         return false;
