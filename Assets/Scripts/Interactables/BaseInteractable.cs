@@ -11,6 +11,13 @@ public abstract class BaseInteractable : MonoBehaviour, IInteractable
 
     public abstract bool Interact(IInteractor interactor);
 
+    protected Collider coll;
+
+    protected virtual void Awake()
+    {
+        coll = GetComponentInChildren<Collider>();
+    }
+
 }
 
 public interface IInteractable
