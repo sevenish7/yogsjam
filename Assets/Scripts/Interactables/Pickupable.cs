@@ -20,22 +20,19 @@ public class Pickupable : BaseInteractable
         return !isPickedUp;
     }
 
-    public override bool Interact(Interactor interactor)
+    public override void Interact(Interactor interactor)
     {
         if(!isPickedUp)
         {
             if(interactor.Pickup(this))
             {
                 Pickup();
-                return true;
             }
         }
-        return false;
     }
 
     private void Pickup()
     {
-        Debug.Log("picked up");
         isPickedUp = true;
         rb.isKinematic = true;
         coll.enabled = false;
