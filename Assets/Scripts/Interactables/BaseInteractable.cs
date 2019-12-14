@@ -8,7 +8,7 @@ public abstract class BaseInteractable : SerializedMonoBehaviour, IInteractable
 {
     public const string INTERACTABLE_LAYER = "Interactable";
     
-    public abstract bool CanInteract();
+    public abstract bool CanInteract(Interactor interactor);
 
     public abstract void Interact(Interactor interactor);
 
@@ -24,6 +24,6 @@ public abstract class BaseInteractable : SerializedMonoBehaviour, IInteractable
 public interface IInteractable
 {
     void Interact(Interactor interactor);
-    bool CanInteract();
+    bool CanInteract(Interactor interactor);
 }
 

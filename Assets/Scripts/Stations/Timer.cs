@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Timer : MonoBehaviour, IStationCompletionCondition
+public class Timer : MonoBehaviour, IStationCompletionCondition, ICompleteable
 {
     [SerializeField] private float duration;
+    [SerializeField] private CompletionBar completionBar;
     private float timeElapsed = 0;
 
     public bool IsRunning { get; private set; }
@@ -18,6 +19,8 @@ public class Timer : MonoBehaviour, IStationCompletionCondition
         {//cant be running already
             return;
         }
+
+        completionBar.HideShow(true);
 
         IsRunning = true;
         timeElapsed = 0;
@@ -37,6 +40,7 @@ public class Timer : MonoBehaviour, IStationCompletionCondition
             if(timeElapsed > duration)
             {
                 IsRunning = false;
+                completionBar.HideShow(false);
                 onComplete.Invoke();
             }
         }
@@ -45,5 +49,10 @@ public class Timer : MonoBehaviour, IStationCompletionCondition
     public bool CanInteract()
     {
         return !IsRunning;
+    }
+
+    public float GetPercentComplete()
+    {
+        return timeElapsed / duration;
     }
 }

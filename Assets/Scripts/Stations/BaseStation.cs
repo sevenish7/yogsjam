@@ -12,7 +12,7 @@ public abstract class BaseStation : BaseInteractable
     protected List<IngredientData> containedIngredients = new List<IngredientData>();
     protected int NumContents { get { return containedIngredients.Count; } }
 
-    public override bool CanInteract()
+    public override bool CanInteract(Interactor interactor)
     {
         return completionCondition.CanInteract();
     }
@@ -49,4 +49,6 @@ public interface IStationCompletionCondition
     void OnInteract();
 
     bool CanInteract();
+
+    bool IsRunning { get; }
 }
