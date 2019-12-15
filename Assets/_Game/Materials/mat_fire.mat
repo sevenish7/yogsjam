@@ -75,7 +75,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _InnerFlameStep: 0.61
+    - _InnerFlameStep: 0.167
     - _Metallic: 0
     - _Mode: 0
     - _Noise1Scale: 1
@@ -83,7 +83,7 @@ Material:
     - _Noise2Scale: 1.5
     - _Noise2Speed: -0.75
     - _OcclusionStrength: 1
-    - _OuterFlameStep: 0.094
+    - _OuterFlameStep: 0.046
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
