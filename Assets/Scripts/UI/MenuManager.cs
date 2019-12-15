@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
@@ -15,6 +16,11 @@ public class MenuManager : MonoBehaviour
     {
         playButton.onClick.AddListener(OpenCharacterSelect);
         quitButton.onClick.AddListener(Quit);
+    }
+
+    public void BeginGame()
+    {
+        SceneManager.LoadScene("Main");
     }
 
     private void OpenCharacterSelect()

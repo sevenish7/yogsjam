@@ -29,7 +29,7 @@ public class EndPanel : MonoBehaviour
 
     private void ReturnToMenu()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Menu");
     }
 
     private void Update()
