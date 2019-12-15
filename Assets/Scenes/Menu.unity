@@ -1542,7 +1542,7 @@ MonoBehaviour:
     Press A to interact and joystick to move.
 
 
-    Tested on Xbox controllers, other controllers will (probably) just werk'
+    Tested on Xbox controllers, other controllers will (probably) just work (maybe)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1570,10 +1570,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
+  m_fontSize: 34.25
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1587,7 +1587,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 282
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1611,10 +1611,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1141084558}
-    characterCount: 319
+    characterCount: 327
     spriteCount: 0
-    spaceCount: 59
-    wordCount: 57
+    spaceCount: 60
+    wordCount: 58
     linkCount: 0
     lineCount: 12
     pageCount: 1
