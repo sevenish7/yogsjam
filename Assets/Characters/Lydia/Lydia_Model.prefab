@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 4394251371247915308}
   - component: {fileID: 5940678464126712918}
   m_Layer: 0
-  m_Name: Lydia_Model (3)
+  m_Name: Lydia_Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,7 +307,7 @@ Animator:
   m_GameObject: {fileID: 765855546301981503}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: bd601f39b9592b944ba72d51f15b0673, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6976ba44ddbdffe4d9c8191b2ce76a95, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
