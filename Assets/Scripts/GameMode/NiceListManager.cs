@@ -46,6 +46,7 @@ public class NiceListManager : MonoBehaviour
     private void RemoveUIItem(ProductType p)
     {
         NiceListUIItem item = spawnedNiceListUI.Find(i => i.Product == p);
+        spawnedNiceListUI.Remove(item);
         if(item != null)
         {
             item.CompleteItem();
