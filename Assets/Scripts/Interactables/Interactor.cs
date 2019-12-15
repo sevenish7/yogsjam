@@ -73,12 +73,15 @@ public class Interactor : MonoBehaviour
 
     private Collider[] FilterCollidersForCurrentState(Collider[] colliders)
     {
-        IEnumerable<Collider> col = colliders.OrderBy(c => (c.transform.position - transform.position).sqrMagnitude);
+        IEnumerable<Collider> col = colliders.AsEnumerable();
 
         if(IsCarrying)
         {
-            col = colliders.Where(c => c.GetComponent<BaseStation>() != null);//move all the stations to the front
+            col = colliders.Where(c => c.GetComponent<BaseStation>() != null
+             || c.GetComponent<DeliveryStation>() != null);//move all the stations to the front
         }
+
+        col = colliders.OrderBy(c => (c.transform.position - transform.position).sqrMagnitude);
 
         return col.ToArray();
     }

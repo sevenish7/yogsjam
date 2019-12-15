@@ -8,6 +8,7 @@ public class CompletionBar : SerializedMonoBehaviour
 {
     [SerializeField] private Slider bar;
     [SerializeField] private ICompleteable target;
+    [SerializeField] private bool zeroToOne = true;
 
     public void HideShow(bool show)
     {
@@ -16,7 +17,7 @@ public class CompletionBar : SerializedMonoBehaviour
 
     private void Update()
     {
-        bar.value = target.GetPercentComplete();
+        bar.value = zeroToOne ? target.GetPercentComplete() : 1 - target.GetPercentComplete();
     }
 }
 
