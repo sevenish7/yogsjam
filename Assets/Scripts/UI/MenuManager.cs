@@ -21,6 +21,17 @@ public class MenuManager : MonoBehaviour
         CharacterSelection.ResetCharacterData();
     }
 
+    private void Update()
+    {
+        if(mainMenu.IsShowing)
+        {
+            if(Input.GetButtonDown("Jump"))
+            {
+                OpenCharacterSelect();
+            }
+        }
+    }
+
     public void BeginGame()
     {
         SceneManager.LoadScene("Main");
