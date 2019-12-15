@@ -15,9 +15,9 @@ public class Pickupable : BaseInteractable
         rb = GetComponentInChildren<Rigidbody>();
     }
 
-    public override bool CanInteract()
+    public override bool CanInteract(Interactor interactor)
     {
-        return !isPickedUp;
+        return !isPickedUp && !interactor.IsCarrying;
     }
 
     public override void Interact(Interactor interactor)

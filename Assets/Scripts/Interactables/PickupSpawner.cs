@@ -8,9 +8,9 @@ public class PickupSpawner : BaseInteractable
     [SerializeField] private IngredientType ingredientType;
     [SerializeField] private IngredientPickup spawnablePrefab;
 
-    public override bool CanInteract()
+    public override bool CanInteract(Interactor interactor)
     {
-        return true;
+        return !interactor.IsCarrying;
     }
 
     public override void Interact(Interactor interactor)

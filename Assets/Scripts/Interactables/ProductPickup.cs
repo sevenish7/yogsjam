@@ -7,6 +7,8 @@ public class ProductPickup : Pickupable
     [SerializeField] private Transform visualRoot = null;
     private ProductType product;
 
+    public ProductType Product { get { return product; } }
+
     public void InitialiseProductData(ProductType type)
     {
         product = type;

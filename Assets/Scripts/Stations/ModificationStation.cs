@@ -8,6 +8,18 @@ public class ModificationStation : BaseStation
     [SerializeField] private ProcessType processToApply;
     [SerializeField] private IngredientPickup ingredientPrefab;
 
+    public override bool CanInteract(Interactor interactor)
+    {
+        if(completionCondition.IsRunning)
+        {
+            return completionCondition.CanInteract();
+        }
+        else
+        {
+            return interactor.CarriedPickup is IngredientPickup pickup && pickup.Ingredient.AppliedProcess == ProcessType.NONE;
+        }
+    }
+
     protected override void FinishProcess()
     {
         IngredientData input = containedIngredients[0];
@@ -17,8 +29,6 @@ public class ModificationStation : BaseStation
         pickup.InitialiseIngredientData(input);
 
         containedIngredients.Clear();
-
-        Debug.Log("process finished");
     }
 
 }
