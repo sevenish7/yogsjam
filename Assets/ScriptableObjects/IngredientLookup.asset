@@ -20,7 +20,7 @@ MonoBehaviour:
     - {fileID: 2212313912624147500, guid: 0b7caf8ff27c712489a5604310d67e6f, type: 3}
     - {fileID: 9028365035811924822, guid: 6bd6db438aa6d71409388fb6fc376ee7, type: 3}
     - {fileID: 1329448470054300118, guid: 2cb8400640e1e1244bdc1c332f1bac71, type: 3}
-    - {fileID: 1672084719868751607, guid: 22b149565b5321b44b31f0042b229788, type: 3}
+    - {fileID: 6139984097639988419, guid: e802329ed8186a54d8461b0703f427f3, type: 3}
     - {fileID: 8113234078520260879, guid: 1d6921b1f0701434798cd96de850dc86, type: 3}
     - {fileID: 6793860902175451278, guid: fb48cfa74b464aa409039d08765d0748, type: 3}
     - {fileID: 3294138540778097864, guid: 473771f9b0e94b145bc3c42ccec27031, type: 3}
@@ -470,7 +470,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  garbagePrefab: {fileID: 6538619320279400728, guid: f14a41e3d26f1054c85dc7ecad9bb81b,
+  garbagePrefab: {fileID: 3607757828713216233, guid: 274dd4140ab74a24f95700374666d0bf,
     type: 3}
   validRecipes:
   - {fileID: 11400000, guid: a235d6b4f0e601e4cb70520e74753cea, type: 2}

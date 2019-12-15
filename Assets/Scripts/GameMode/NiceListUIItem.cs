@@ -61,6 +61,7 @@ public class NiceListUIItem : SerializedMonoBehaviour
     private IEnumerator WaitThenDestroy()
     {
         yield return new WaitForSeconds(waitBeforeDestroyTime);
+        Destroy(gameObject);
     }
 
     private void SetLayerRecursively(GameObject obj, int newLayer)
