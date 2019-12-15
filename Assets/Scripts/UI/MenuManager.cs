@@ -30,6 +30,11 @@ public class MenuManager : MonoBehaviour
                 OpenCharacterSelect();
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     public void BeginGame()

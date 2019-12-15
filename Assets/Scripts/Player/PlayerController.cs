@@ -60,6 +60,11 @@ public class PlayerController : MonoBehaviour
         {
             interactor.TryInteract();
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     private void Move()

@@ -8445,6 +8445,11 @@ PrefabInstance:
       propertyPath: completionBar
       value: 
       objectReference: {fileID: 91536888}
+    - target: {fileID: 4279672749709435290, guid: 7a4f6eb5eda4ce64c81bd2ea1fff198f,
+        type: 3}
+      propertyPath: duration
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 4279672749709435291, guid: 7a4f6eb5eda4ce64c81bd2ea1fff198f,
         type: 3}
       propertyPath: m_Name
