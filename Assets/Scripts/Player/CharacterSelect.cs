@@ -4,19 +4,26 @@ using UnityEngine;
 
 public static class CharacterSelection
 {
-    public static SelectedCharacter Player1;
-    public static SelectedCharacter Player2;
-    public static SelectedCharacter Player3;
-    public static SelectedCharacter Player4;
-
+    public static CharacterType Player1;
+    public static CharacterType Player2;
+    public static CharacterType Player3;
+    public static CharacterType Player4;
 }
 
-public enum SelectedCharacter
+public enum CharacterType
 {
     NONE,
-    SIMON,
-    LEWIS,
-    DUNCAN,
-    ZYLUS,
-    RYTHIAN,
+    Simon,
+    Lewis,
+    Duncan,
+    Ben,
+    Zylus,
+    Rythian,
+    Tom,
+    Bouphe,
+    Lydia,
+    Barry,
+    Spiff,
+    Zoey,
+    Pedguin,
 }
