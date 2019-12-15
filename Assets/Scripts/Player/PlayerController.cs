@@ -18,7 +18,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float turnSpeed = 0.5f;
 
     [SerializeField] private Interactor interactor = null;
-    [SerializeField] private Animator animator = null;
+    [SerializeField] private Transform characterMeshParent = null;
+    
+    private Animator animator = null;
 
     private CharacterController characterController;
 
@@ -26,6 +28,28 @@ public class PlayerController : MonoBehaviour
     {
         //move this into the spawn player function
         characterController = GetComponentInChildren<CharacterController>();
+    }
+
+    private void Start()
+    {
+        SpawnCharacterPrefab();
+    }
+
+    private void SpawnCharacterPrefab()
+    {
+        CharacterType chosenCharacter = CharacterSelection.Players[playerNum];
+
+        if(chosenCharacter != CharacterType.NONE)
+        {
+           GameObject prefab = CharacterSelectionLookupManager.Instance.GetPrefabForCharacterType(chosenCharacter);
+           GameObject spawned = Instantiate(prefab, characterMeshParent);
+           animator = spawned.GetComponentInChildren<Animator>(true);
+        }
+        else
+        {
+            gameObject.SetActive(false);//we arent playing this round
+        }
+
     }
 
     void Update()
@@ -50,7 +74,10 @@ public class PlayerController : MonoBehaviour
 
         characterController.Move(delta);
 
-        animator.SetFloat("velX", Mathf.Abs(characterController.velocity.x));
-        animator.SetFloat("velZ", Mathf.Abs(characterController.velocity.z));
+        if(animator != null)
+        {
+            animator.SetFloat("velX", Mathf.Abs(characterController.velocity.x));
+            animator.SetFloat("velZ", Mathf.Abs(characterController.velocity.z));
+        }
     }
 }

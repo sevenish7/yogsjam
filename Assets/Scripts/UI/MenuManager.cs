@@ -16,6 +16,9 @@ public class MenuManager : MonoBehaviour
     {
         playButton.onClick.AddListener(OpenCharacterSelect);
         quitButton.onClick.AddListener(Quit);
+
+        //reset when we hit the menu in case we came from a game
+        CharacterSelection.ResetCharacterData();
     }
 
     public void BeginGame()

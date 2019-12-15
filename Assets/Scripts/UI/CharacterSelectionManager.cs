@@ -83,6 +83,13 @@ public class CharacterSelectionManager : MonoBehaviour
     private void CompleteCountdown()
     {
         ResetCountdown();
+
+        for(int i = 0; i < characterSelectors.Count; i++)
+        {
+            CharacterSelection.Players[i] = characterSelectors[i].SelectedCharacter;
+            Debug.Log("Player " + i + " selected " + characterSelectors[i].SelectedCharacter.ToString());
+        }
+
         menuManager.BeginGame();
     }
 }

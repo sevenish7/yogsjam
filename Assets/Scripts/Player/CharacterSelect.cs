@@ -4,10 +4,21 @@ using UnityEngine;
 
 public static class CharacterSelection
 {
-    public static CharacterType Player1;
-    public static CharacterType Player2;
-    public static CharacterType Player3;
-    public static CharacterType Player4;
+    public static CharacterType[] Players = new CharacterType[]
+    {
+        CharacterType.NONE,
+        CharacterType.NONE,
+        CharacterType.NONE,
+        CharacterType.NONE,
+    };
+
+    public static void ResetCharacterData()
+    {
+        for(int i = 0; i < Players.Length; i++)
+        {
+            Players[i] = CharacterType.NONE;
+        }
+    }
 }
 
 public enum CharacterType
