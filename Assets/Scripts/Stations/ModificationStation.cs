@@ -22,6 +22,8 @@ public class ModificationStation : BaseStation
 
     protected override void FinishProcess()
     {
+        base.FinishProcess();
+
         IngredientData input = containedIngredients[0];
         input.AppliedProcess = processToApply;
 

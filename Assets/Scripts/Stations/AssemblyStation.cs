@@ -10,6 +10,8 @@ public class AssemblyStation : BaseStation
 
     protected override void FinishProcess()
     {
+        base.FinishProcess();
+
         ProductType product = IngredientDataLookupManager.Instance.GetProductTypeForRecipe(containedIngredients.Select(i => i.ProcessedIngredient));
         ProductPickup pickup = Instantiate(productPrefab, finalProductSpawnTransform.position, finalProductSpawnTransform.rotation);
         pickup.InitialiseProductData(product);
