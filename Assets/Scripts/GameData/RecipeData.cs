@@ -12,6 +12,7 @@ public class RecipeData : SerializedScriptableObject
     [SerializeField] private ProductType product;
 
     public ProductType Product { get { return product; } }
+    public List<System.Tuple<IngredientType, ProcessType>> RequiredIngredients { get { return requiredIngredients; } }
 
     public bool MatchesRecipe(IEnumerable<System.Tuple<IngredientType, ProcessType>> ingredients)
     {

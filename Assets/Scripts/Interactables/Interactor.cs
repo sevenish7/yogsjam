@@ -8,10 +8,15 @@ public class Interactor : MonoBehaviour
 {
     [SerializeField] Transform carryTransform = null;
     [SerializeField] private float interactRadius = 3f;
-    [SerializeField] private Animator animator;
+    private Animator animator;
 
     public Pickupable CarriedPickup {get; private set; }
     public bool IsCarrying {get; private set; }
+
+    public void Initialise(Animator anim)
+    {
+        animator = anim;
+    }
 
     public virtual bool CanInteract()
     {

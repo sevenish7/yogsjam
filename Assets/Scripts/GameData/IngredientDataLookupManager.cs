@@ -55,4 +55,34 @@ public class IngredientDataLookupManager : MonoBehaviour
         }
         return ProductType.GARBAGE;
     }
+
+    public RecipeData GetRecipeForProductType(ProductType product)
+    {
+        foreach(var recipe in lookup.ValidRecipes)
+        {
+            if(recipe.Product == product)
+            {
+                return recipe;
+            }
+        }
+        return null;
+    }
+
+    public Sprite GetSpriteForIngredient(IngredientType type)
+    {
+        if(lookup.SpritesForIngredients.ContainsKey(type))
+        {
+            return lookup.SpritesForIngredients[type];
+        }
+        return null;
+    }
+
+    public Sprite GetSpriteForProcess(ProcessType type)
+    {
+        if(lookup.SpritesForProcesses.ContainsKey(type))
+        {
+            return lookup.SpritesForProcesses[type];
+        }
+        return null;
+    }
 }

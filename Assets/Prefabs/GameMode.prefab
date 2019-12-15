@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4279672749709435288}
   - component: {fileID: 4279672749709435289}
   - component: {fileID: 4279672749709435290}
+  - component: {fileID: 7814053819304635305}
   m_Layer: 0
   m_Name: GameMode
   m_TagString: Untagged
@@ -191,7 +192,7 @@ MonoBehaviour:
       Data: 
   timer: {fileID: 4279672749709435290}
   endPanel: {fileID: 0}
-  pauseMenu: {fileID: 0}
+  niceListManager: {fileID: 7814053819304635305}
   niceListPointsMultiplier: 1.5
   niceListTimeMultiplier: 2
 --- !u!114 &4279672749709435290
@@ -208,3 +209,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 180
   completionBar: {fileID: 0}
+--- !u!114 &7814053819304635305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4279672749709435291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d734807cc7e4bae479edc7bb70071c11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numItemsInListAtOnce: 3
+  niceListUIParent: {fileID: 0}
+  uiItemPrefab: {fileID: 4690360611531810068, guid: e0df9f29255dbff45add1b03b6641bce,
+    type: 3}
+  listCooldown: 2
