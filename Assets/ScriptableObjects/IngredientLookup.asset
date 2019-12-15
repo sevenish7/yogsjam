@@ -20,16 +20,22 @@ MonoBehaviour:
     - {fileID: 2212313912624147500, guid: 0b7caf8ff27c712489a5604310d67e6f, type: 3}
     - {fileID: 9028365035811924822, guid: 6bd6db438aa6d71409388fb6fc376ee7, type: 3}
     - {fileID: 1329448470054300118, guid: 2cb8400640e1e1244bdc1c332f1bac71, type: 3}
-    - {fileID: 6139984097639988419, guid: e802329ed8186a54d8461b0703f427f3, type: 3}
+    - {fileID: 1672084719868751607, guid: 22b149565b5321b44b31f0042b229788, type: 3}
     - {fileID: 8113234078520260879, guid: 1d6921b1f0701434798cd96de850dc86, type: 3}
     - {fileID: 6793860902175451278, guid: fb48cfa74b464aa409039d08765d0748, type: 3}
     - {fileID: 3294138540778097864, guid: 473771f9b0e94b145bc3c42ccec27031, type: 3}
     - {fileID: 4326080252946715556, guid: e55cd60bdf758a54aae3ed42066aca7d, type: 3}
-    - {fileID: 2952552365483073227, guid: 6a43ff4bf170eac468fd579cdd8b50c2, type: 3}
-    - {fileID: 683309790446979933, guid: 14c5e07ae05c417438db0f1de5ad28f9, type: 3}
+    - {fileID: 8115269029888496760, guid: 111ba8ec2e55ae948aaeebd726336aa4, type: 3}
+    - {fileID: 209021061754662480, guid: dba888bfb60e1b141b754f273fffd664, type: 3}
     - {fileID: 1438233768709771283, guid: 44f49878a764dac4aa18e5d4033d3ec7, type: 3}
-    - {fileID: 4469908292618063879, guid: cbb1c9fb2627d8746ae100aaa8a2183c, type: 3}
-    - {fileID: 877909937762253476, guid: 40d28aacdb3314b42a4356d4597a2417, type: 3}
+    - {fileID: 2497728862116152341, guid: ab3eadabfd0a0fe4b8c66d6fcb4760a8, type: 3}
+    - {fileID: 169543505058935365, guid: 52332592c4fd94f42ba79902adc23e3c, type: 3}
+    - {fileID: 21300000, guid: 2e075c03d2de5e24190ccbac6a7b5168, type: 3}
+    - {fileID: 21300000, guid: 96d46a59805b5234a87282b55629a6ab, type: 3}
+    - {fileID: 21300000, guid: 19552e17d80c0fb48b5a6b10c9cd6772, type: 3}
+    - {fileID: 21300000, guid: 65a9bb47dec462742957788b1b7eedfd, type: 3}
+    - {fileID: 21300000, guid: 4803b56bd7d33354994eea8e9fb615bb, type: 3}
+    - {fileID: 21300000, guid: 5e2992c70735a1849a70cb5adf3d6c26, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -340,7 +346,131 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  garbagePrefab: {fileID: 3607757828713216233, guid: 274dd4140ab74a24f95700374666d0bf,
+    - Name: spritesForIngredients
+      Entry: 7
+      Data: 13|System.Collections.Generic.Dictionary`2[[IngredientType, Assembly-CSharp],[UnityEngine.Sprite,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 14|System.Collections.Generic.EnumEqualityComparer`1[[IngredientType,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 10
+      Data: 14
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 10
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 10
+      Data: 16
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 10
+      Data: 17
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: spritesForProcesses
+      Entry: 7
+      Data: 15|System.Collections.Generic.Dictionary`2[[ProcessType, Assembly-CSharp],[UnityEngine.Sprite,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 16|System.Collections.Generic.EnumEqualityComparer`1[[ProcessType, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 10
+      Data: 18
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 10
+      Data: 19
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  garbagePrefab: {fileID: 6538619320279400728, guid: f14a41e3d26f1054c85dc7ecad9bb81b,
     type: 3}
   validRecipes:
   - {fileID: 11400000, guid: a235d6b4f0e601e4cb70520e74753cea, type: 2}

@@ -19,4 +19,11 @@ public class IngredientDataLookup : SerializedScriptableObject
 
     [SerializeField] private List<RecipeData> validRecipes = new List<RecipeData>();
     public List<RecipeData> ValidRecipes { get { return validRecipes; } }
+
+    public Dictionary<IngredientType, Sprite> SpritesForIngredients { get => spritesForIngredients; }
+    public Dictionary<ProcessType, Sprite> SpritesForProcesses { get => spritesForProcesses; }
+
+    [OdinSerialize] Dictionary<IngredientType, Sprite> spritesForIngredients = new Dictionary<IngredientType, Sprite>();
+    [OdinSerialize] Dictionary<ProcessType, Sprite> spritesForProcesses = new Dictionary<ProcessType, Sprite>();
+
 }

@@ -10,7 +10,7 @@ public class GameMode : SerializedMonoBehaviour
 
     [SerializeField] private GameTimer timer; 
     [SerializeField] private EndPanel endPanel;
-    [SerializeField] private PauseMenu pauseMenu;
+    [SerializeField] private NiceListManager niceListManager;
 
     [SerializeField] private float niceListPointsMultiplier = 1.5f;
     [SerializeField] private float niceListTimeMultiplier = 2f;
@@ -33,6 +33,7 @@ public class GameMode : SerializedMonoBehaviour
     private void Start()
     {
         timer.Initialise(GameComplete);
+        niceListManager.Initialise();
     }
 
     private void GameComplete()
@@ -51,6 +52,8 @@ public class GameMode : SerializedMonoBehaviour
             {
                 earntPoints = Mathf.FloorToInt(earntPoints * niceListPointsMultiplier);
                 earntTime *= niceListTimeMultiplier;
+
+                niceListManager.CompleteItemInList(product);
             }
 
             Points += earntPoints;
@@ -72,6 +75,6 @@ public class GameMode : SerializedMonoBehaviour
 
     private bool isNiceListItem(ProductType product)
     {
-        return false;
+        return niceListManager.IsProductInNiceList(product);
     }
 }

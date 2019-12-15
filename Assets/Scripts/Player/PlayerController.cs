@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         SpawnCharacterPrefab();
+        interactor.Initialise(animator);
     }
 
     private void SpawnCharacterPrefab()
